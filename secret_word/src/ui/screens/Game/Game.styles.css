@@ -1,0 +1,48 @@
+.game {
+    width: 100%;
+
+}
+
+.word__hint {
+    color: white;
+
+}
+
+.game__content {
+    background-color: var(--primary2);
+    width: 42em;
+    max-width: 95%;
+    text-align: center;
+    border-radius: .3em;
+    padding: 1em;
+    margin: 15em auto 3em auto;
+
+}
+
+.hidden__word {
+    display: flex;
+    justify-content: center;
+    margin: 1.4em 0;
+
+}
+
+.letter {
+    color: black;
+    background-color: white;
+    margin: 0 .3em;
+    width: 3em;
+    height: 1.3em;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.hidden {
+    color: rgba(0, 0, 0, 0);
+
+}
+
+.word__hint {
+    font-size: 2rem;
+
+}

@@ -25,7 +25,8 @@ function App() {
   return (
     <div className="App">
       {
-        isGameStarted? <Game wordHint={wordHint} wordLetters={letters}/> : <Home handleStartGame={() => handleStartGame()}/>
+        isGameStarted? 
+        <Game wordHint={wordHint} wordLetters={letters}/> : <Home handleStartGame={() => handleStartGame()}/>
 
       }
 
