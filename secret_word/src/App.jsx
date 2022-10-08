@@ -3,7 +3,7 @@ import { words } from './constants/index';
 import { useState } from 'react';
 
 import './App.css';
-import { Home } from './ui/screens/index';
+import { Home, Game } from './ui/screens/index';
 
 function App() {
   const [isGameStarted, setIsGameStarted] = useState(false)
@@ -13,7 +13,7 @@ function App() {
   const handleStartGame = () => {
     const randomNumber = Math.floor(Math.random() * words.length)
     const randomWord = words[randomNumber]
-    const wordLetters = randomWord.split('')
+    const wordLetters = randomWord.name.split('')
 
     setIsGameStarted(true)
 
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       {
-        isGameStarted? undefined : <Home handleStartGame={handleStartGame}/>
+        isGameStarted? <Game wordHint={wordHint} wordLetters={letters}/> : <Home handleStartGame={() => handleStartGame()}/>
 
       }
 
