@@ -1,0 +1,17 @@
+.button {
+    width: 92%;
+    height: 2em;
+    border: none;
+    border-radius: .3em;
+    background-color: var(--button);
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+}
+
+.button:hover {
+    background-color: var(--button-hover);
+
+}
