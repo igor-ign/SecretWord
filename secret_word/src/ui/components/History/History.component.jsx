@@ -5,7 +5,9 @@ export const History = ({history}) => {
         <>
             {
                 history.map((item) => {
-                    return <p className={`history__letter ${item.isCorrect? 'correct' : 'wrong'}`}>{item.letter}</p>
+                    return <p className={`history__letter ${item.isCorrect? 'correct' : 'wrong'}`}>
+                                {item.letter}
+                            </p>
 
                 })
             }

@@ -65,7 +65,7 @@ export const Game = ({wordHint, wordLetters}) => {
                     <span className='span'>Type a letter down here</span>
 
                     <input 
-                    type="text" 
+                    type='text'
                     className='letter__input'
                     onChange={handleStoreAttempt}
                     disabled={isInputDisabled || isUserWinner}
@@ -84,7 +84,7 @@ export const Game = ({wordHint, wordLetters}) => {
 
             </div>
 
-            <div className="history">
+            <div className='history'>
                 {letterHistory.length > 0? <History history={letterHistory}/> : <p className='empty__history'>You haven't typed any letters yet</p>}
 
             </div>
