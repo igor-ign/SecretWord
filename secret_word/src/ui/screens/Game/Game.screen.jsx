@@ -89,8 +89,6 @@ export const Game = ({wordHint, wordLetters}) => {
 
             </div>
 
-            
-
         </div>
 
     )
