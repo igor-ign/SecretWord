@@ -3,12 +3,15 @@
 
 }
 
-.word__hint {
+.word__hint, .span {
     color: white;
 
 }
 
 .game__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--primary2);
     width: 42em;
     max-width: 95%;
@@ -19,10 +22,22 @@
 
 }
 
-.hidden__word {
+.hidden__word, .label {
     display: flex;
     justify-content: center;
+
+}
+
+.hidden__word {
     margin: 1.4em 0;
+    max-width: 90%;
+
+}
+
+.label {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
 }
 
@@ -44,5 +59,34 @@
 
 .word__hint {
     font-size: 2rem;
+
+}
+
+.letter__input {
+    text-align: center;
+    width: 4em;
+    height: 3em;
+    margin: 1.3em 0;
+
+}
+
+.span {
+    font-size: 1.3rem;
+
+}
+
+@media (max-width: 525px) {
+    .letter {
+        width: 1em;
+        height: .8em;
+        margin: 0.05em;
+
+    }
+
+    .letter__input {
+        width: 2.5em;
+        height: 1.8em;
+
+    }
 
 }
