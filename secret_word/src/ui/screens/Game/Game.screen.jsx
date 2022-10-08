@@ -8,6 +8,7 @@ export const Game = ({wordHint, wordLetters}) => {
     const [isInputDisabled, setIsInputDisabled] = useState(false)
     const [isUserWinner, setIsUserWinner] = useState(false)
     const [attempt, setAttempt] = useState()
+    const [letterHistory, setLetterHistory] = useState()
 
     const handleStoreAttempt = (e) => {
         setIsInputDisabled(true)
@@ -24,6 +25,11 @@ export const Game = ({wordHint, wordLetters}) => {
                 letterID[i].className = 'letter'
 
             }
+
+            setLetterHistory([...letterHistory, {letter: attempt, isCorrect: true}])
+
+        } else {
+            setLetterHistory([...letterHistory, {letter: attempt, isCorrect: false}])
 
         }
 
@@ -77,6 +83,8 @@ export const Game = ({wordHint, wordLetters}) => {
                 {isUserWinner && <Button text='Play again' handleFunction={() => window.location.reload()}/>}
 
             </div>
+
+            
 
         </div>
 
