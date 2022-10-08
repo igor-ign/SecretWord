@@ -60,3 +60,8 @@ I decided to make the game look like something really secret, the result is the 
 
 ![My game](https://github.com/igor-ign/secret_word/blob/main/secret_word/readme_images/GameScreenWrongLetter.jpg)
 
+<h1>Dependencies</h1>
+<ul>
+  <li>ReactJS</li>
+</ul>
+
