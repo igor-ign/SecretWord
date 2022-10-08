@@ -1,0 +1,21 @@
+.history__letter {
+    padding: .3em;
+    margin: .3em;
+    width: 3em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: .2em;
+
+}
+
+.correct {
+    background-color: var(--correct-letter);
+
+}
+
+.wrong {
+    background-color: var(--wrong-letter);
+    color: white;
+
+}

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { Button } from '../../components/index'
+import { Button, History } from '../../components/index'
 
 import './Game.styles.css'
 
@@ -8,7 +8,7 @@ export const Game = ({wordHint, wordLetters}) => {
     const [isInputDisabled, setIsInputDisabled] = useState(false)
     const [isUserWinner, setIsUserWinner] = useState(false)
     const [attempt, setAttempt] = useState()
-    const [letterHistory, setLetterHistory] = useState()
+    const [letterHistory, setLetterHistory] = useState([])
 
     const handleStoreAttempt = (e) => {
         setIsInputDisabled(true)
@@ -75,12 +75,17 @@ export const Game = ({wordHint, wordLetters}) => {
                 </label>
 
                 <Button 
-                text={isUserWinner? 'You win' : 'Guess'} 
+                text={isUserWinner? 'You win!' : 'Guess'} 
                 handleFunction={handleValidateAttempt}
                 isButtonDisabled={isUserWinner}
                 />
 
                 {isUserWinner && <Button text='Play again' handleFunction={() => window.location.reload()}/>}
+
+            </div>
+
+            <div className="history">
+                {letterHistory.length > 0? <History history={letterHistory}/> : <p className='empty__history'>You haven't typed any letters yet</p>}
 
             </div>
 

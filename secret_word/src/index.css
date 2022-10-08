@@ -15,5 +15,7 @@ html {
   --primary2: rgb(65, 65, 65);
   --button: rgb(21, 199, 21);
   --button-hover: rgb(15, 207, 15);
+  --correct-letter: rgb(72, 207, 72);
+  --wrong-letter: rgb(227, 64, 64);
 
 }

@@ -75,6 +75,25 @@
 
 }
 
+.history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 42em;
+    max-width: 95%;
+    background-color: var(--primary2);
+    margin: auto;
+    border-radius: .3em;
+    padding: .5em;
+
+}
+
+.empty__history {
+    color: white;
+    font-size: 1.3rem;
+
+}
+
 @media (max-width: 525px) {
     .letter {
         width: 1em;
@@ -86,6 +105,14 @@
     .letter__input {
         width: 2.5em;
         height: 1.8em;
+
+    }
+
+}
+
+@media (max-width: 300px) {
+    .game__content {
+        margin: 6em auto 3em auto;
 
     }
 
