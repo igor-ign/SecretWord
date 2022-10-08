@@ -6,6 +6,7 @@ import './Game.styles.css'
 
 export const Game = ({wordHint, wordLetters}) => {
     const [isInputDisabled, setIsInputDisabled] = useState(false)
+    const [isUserWinner, setIsUserWinner] = useState(false)
     const [attempt, setAttempt] = useState()
 
     const handleStoreAttempt = (e) => {
@@ -23,6 +24,11 @@ export const Game = ({wordHint, wordLetters}) => {
                 letterID[i].className = 'letter'
 
             }
+
+        }
+
+        if (notHiddenWords.length === 0) {
+            setIsUserWinner(true)
 
         }
 
@@ -56,13 +62,19 @@ export const Game = ({wordHint, wordLetters}) => {
                     type="text" 
                     className='letter__input'
                     onChange={handleStoreAttempt}
-                    disabled={isInputDisabled}
+                    disabled={isInputDisabled || isUserWinner}
                     value={attempt}
                     />
 
                 </label>
 
-                <Button text='Guess' handleFunction={handleValidateAttempt}/>
+                <Button 
+                text={isUserWinner? 'You win' : 'Guess'} 
+                handleFunction={handleValidateAttempt}
+                isButtonDisabled={isUserWinner}
+                />
+
+                {isUserWinner && <Button text='Play again' handleFunction={() => window.location.reload()}/>}
 
             </div>
 

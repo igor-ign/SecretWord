@@ -8,11 +8,17 @@
     color: white;
     font-weight: 700;
     font-size: 1.6rem;
+    margin-top: .5em;
 
 }
 
 .button:hover {
     background-color: var(--button-hover);
+
+}
+
+.button:disabled {
+    background-color: rgb(106, 126, 106);
 
 }
 
